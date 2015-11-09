@@ -3,28 +3,24 @@ layout: page
 title: About
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+![In Ubud !](/assets/Bali.jpg)
 
-In the novel, *The Strange Case of Dr. Jekyll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+Hi!
 
-There are currently two themes built on Poole:
+I'm Goutham Harsha. You can call me _xek_. Welcome to my little corner in the world wide web.
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
 
-Learn more and contribute on [GitHub](https://github.com/poole).
+I am a Software Engineer - II at [Microsoft](https://azure.microsoft.com) in
+the Azure team. 
 
-## Setup
+I am passionate about computer science and the problem of _scale_ fascinates me. This website is an attempt to create a system for constantly learning and becoming a better engineer by documenting my progress and thoughts about software development, programming and other things that interest me.
 
-Some fun facts about the setup of this project include:
+Before working at Microsoft, I worked at 
+[Oracle (Server Technologies)](http://www.oracle.com/index.html) on 
+ Oracle Database 12c and [Kiwi Inc.](http://www.kiwiup.com/games/), a Sequoia Capital funded game development start up .
 
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
+I hold a Bachelor's degree in engineering (Computer Science) from [(BITS), Pilani](http://www.bits-pilani.ac.in) - one of India's premier most engineering institutions.
 
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
 
-Thanks for reading!
+
+If you like my website, you can follow me on twitter [@goutham_harsha](https://twitter.com/goutham_harsha).
