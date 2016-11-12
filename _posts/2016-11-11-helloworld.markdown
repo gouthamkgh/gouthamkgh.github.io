@@ -7,6 +7,6 @@ categories: main
 
 This is my attempt to create a system for tracking my goals, and constantly learning and becoming a better engineer by documenting my thoughts about software development, life, travel and other things that interest me.
 
-![Japan!](/assets/Japan.jpg)
+![Japan!](https://raw.githubusercontent.com/gouthamkgh/gouthamkgh.github.io/master/assets/Japan.JPG)
 
 <!-- <aside class = "notice"> This is a notice </aside> -->
