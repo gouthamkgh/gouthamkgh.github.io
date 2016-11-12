@@ -1,0 +1,17 @@
+<section class="page-header">
+  <h1 class="project-name">{{ site.title }}</h1>
+  <h2 class="project-tagline">{{ site.tagline }}</h2>
+  <a href="https://github.com/gouthamkgh" class="btn">GitHub</a>
+  <a href="/assets/Goutham_Harsha_Resume.pdf" class="btn">Resume</a>
+  <a href="/archive/" class="btn">Archive</a>
+
+  <!-- Adding a custom button is as simple as adding a .md file in root under "page" layout -->
+  {% assign pages_list = site.pages %}
+  {% for node in pages_list %}
+    {% if node.title != null %}
+      {% if node.layout == "page" %}
+        <a class="btn" href="{{ node.url }}">{{ node.title }}</a>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+</section>

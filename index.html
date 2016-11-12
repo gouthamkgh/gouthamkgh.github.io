@@ -1,13 +1,22 @@
 ---
 layout: default
-title: Home
+title: {{ site.name }}
 ---
 
+<!-- <div id="home" class="post">
+  <h1>Blog Posts</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+ -->
 <div class="posts">
   {% for post in paginator.posts %}
   <div class="post">
-    <h1 class="post-title">
-      <a href="{{ site.baseurl }}/{{ post.url }}">
+    <h1>
+      <!-- <a href="{{ post.url }}"> -->
         {{ post.title }}
       </a>
     </h1>
@@ -35,4 +44,3 @@ title: Home
     <span class="pagination-item newer">Newer</span>
   {% endif %}
 </div>
-
