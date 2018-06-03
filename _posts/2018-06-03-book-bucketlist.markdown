@@ -12,5 +12,5 @@ categories: main
 ------------------------
 1. Born a crime - Trevor Noah
 2. Option B - Sheryl Sandberg
-3. Shoe Dog - Phil Knight
+3. Shoe Dog - Phil Knight :metal:
 4. Thinking fast and slow - Daniel Kahneman
