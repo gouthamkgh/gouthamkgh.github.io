@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  Books for learning distributed systems
+title:  Book bucketlist
 date:   2018-06-03 13:30:00
 categories: main
 ---
