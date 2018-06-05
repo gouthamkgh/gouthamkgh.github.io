@@ -7,6 +7,7 @@ categories: main
 
 ## Technical books:
 -------------------
+0. Writing Solid Code - Steve Maguire :seedling:
 1. Distributed Algorithms - Nancy Lynch
 2. Designing Data-intensive applications - Martin Kleppmann :seedling:
 3. Art of Unit testing - Roy Osherove
@@ -18,15 +19,15 @@ categories: main
 
 ## Personal improvement:
 ------------------------
-1. Born a crime - Trevor Noah :seedling:
-2. Option B - Sheryl Sandberg
-3. Shoe Dog - Phil Knight :seedling:
-4. Thinking fast and slow - Daniel Kahneman
-5. Idea Man - Paul Allen
+0. Born a crime - Trevor Noah :seedling:
+1. Option B - Sheryl Sandberg
+2. Shoe Dog - Phil Knight :seedling:
+3. Thinking fast and slow - Daniel Kahneman
+4. Idea Man - Paul Allen
 
 [mixu]: http://book.mixu.net/distsys/single-page.html
 
 ### Legend:
 -----------
 :seedling: => currently reading  
-:evergreen_tree: => finished reading 
+:evergreen_tree: => finished reading  
