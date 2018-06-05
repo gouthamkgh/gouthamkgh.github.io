@@ -8,7 +8,7 @@ categories: main
 ## Technical books:
 -------------------
 1. Distributed Algorithms - Nancy Lynch
-2. Designing Data-intensive applications - Martin Kleppmann
+2. Designing Data-intensive applications - Martin Kleppmann :seedling:
 3. Art of Unit testing - Roy Osherove
 4. Reactive Systems Architecture - Martin Zapetal
 5. Pragmatic Programmer
@@ -18,10 +18,15 @@ categories: main
 
 ## Personal improvement:
 ------------------------
-1. Born a crime - Trevor Noah :blue_book:
+1. Born a crime - Trevor Noah :seedling:
 2. Option B - Sheryl Sandberg
-3. Shoe Dog - Phil Knight :blue_book:
+3. Shoe Dog - Phil Knight :seedling:
 4. Thinking fast and slow - Daniel Kahneman
 5. Idea Man - Paul Allen
 
 [mixu]: http://book.mixu.net/distsys/single-page.html
+
+### Legend:
+-----------
+:seedling: => currently reading
+:evergreen_tree: => finished reading 
