@@ -28,5 +28,5 @@ categories: main
 
 ### Legend:
 -----------
-:seedling: => currently reading
+:seedling: => currently reading  
 :evergreen_tree: => finished reading 
