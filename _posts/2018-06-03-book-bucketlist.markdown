@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title:  Book bucketlist
 date:   2018-06-03 13:30:00
 categories: main

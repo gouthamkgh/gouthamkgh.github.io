@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title:  Hello, World!
 date:   2016-11-11 17:50:00
 categories: main
