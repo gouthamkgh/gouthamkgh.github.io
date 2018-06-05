@@ -1,6 +1,6 @@
 ---
-layout: page
-title: "Shoe Dog - Phil Knight"
+layout: post
+title: Shoe Dog - Phil Knight
 date:   2018-06-03 13:30:00
 categories: main
 ---

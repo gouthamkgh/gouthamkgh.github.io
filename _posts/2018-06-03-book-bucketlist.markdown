@@ -1,6 +1,6 @@
 ---
-layout: page
-title:  Book bucketlist
+layout: post
+title:  Books I plan on reading
 date:   2018-06-03 13:30:00
 categories: main
 ---
