@@ -18,9 +18,9 @@ categories: main
 
 ## Personal improvement:
 ------------------------
-1. Born a crime - Trevor Noah
+1. Born a crime - Trevor Noah :blue_book:
 2. Option B - Sheryl Sandberg
-3. Shoe Dog - Phil Knight :metal:
+3. Shoe Dog - Phil Knight :blue_book:
 4. Thinking fast and slow - Daniel Kahneman
 5. Idea Man - Paul Allen
 
