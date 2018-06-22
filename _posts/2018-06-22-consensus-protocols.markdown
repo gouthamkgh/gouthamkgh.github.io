@@ -71,21 +71,21 @@ In case of split votes, the nodes wait for a new election and try again.
 
 Raft can even stay consistent in the face of network partitions. If we have two partitions, we will end up having 2 leaders in two different terms.  
 
-- Let's say we have 5 nodes A,B,C,D,E with A as the leader and there was a network partition
-- Let's say Partition_1 has two nodes A and B with A as the Leader
-- Partition_2 has three nodes C, D, E
+- Let's say we have 5 nodes `A, B, C, D, E` with `A` as the leader and there was a network partition
+- Let's say `Partition_1` has two nodes `A` and `B` with `A` as the Leader
+- `Partition_2` has three nodes `C, D, E`
 
-Assume Client_1 writes to Partition_1  
-- It sends a request to the current Leader - node A
-- Node A sees that it can't replicate to majority, so the log entries don't get committed 
-- Meanwhile, in Partition_2, a new Leader election happens (let's say C is the new leader)  
+Assume `Client_1` writes to `Partition_1`  
+- It sends a request to the current Leader - node `A`
+- Node `A` sees that it can't replicate to majority, so the log entries don't get committed 
+- Meanwhile, in `Partition_2`, a new Leader election happens (let's say `C` is the new leader)  
 
-Assume Client_2 sends a write request to node C  
-- Node C sends heartbeats, gets majority as usual, and then commits its entries  
+Assume `Client_2` sends a write request to node `C`  
+- Node `C` sends heartbeats, gets majority as usual, and then commits its entries  
 
 Now let's heal the partition  
-- Node A will see that Node C is the Leader in the latest term
-- So node A will become a follower 
-- Nodes A and B will revert their logs and sync up with the logs the new Leader (C) has and commit them
+- Node `A` will see that Node `C` is the Leader in the latest term
+- So node `A` will become a follower 
+- Nodes `A` and `B` will revert their logs and sync up with the logs the new Leader (`C`) has and commit them
 
 Thus we have consistency and partition tolerance.
