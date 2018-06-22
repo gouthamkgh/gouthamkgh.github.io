@@ -72,7 +72,7 @@ In case of split votes, the nodes wait for a new election and try again.
 Raft can even stay consistent in the face of network partitions. If we have two partitions, we will end up having 2 leaders in two different terms.  
 
 - Let's say we have 5 nodes `A, B, C, D, E` with `A` as the leader and there was a network partition
-- Let's say `Partition_1` has two nodes `A` and `B` with `A` as the Leader
+- Let's say `Partition_1` has two nodes `A` and `B`, with `A` as the Leader
 - `Partition_2` has three nodes `C, D, E`
 
 Assume `Client_1` writes to `Partition_1`  
@@ -88,4 +88,14 @@ Now let's heal the partition
 - So node `A` will become a follower 
 - Nodes `A` and `B` will revert their logs and sync up with the logs the new Leader (`C`) has and commit them
 
-Thus we have consistency and partition tolerance.
+Thus we have consistency and partition tolerance.  
+
+## References:
+--------------
+- [Raft beginner tour][raft_beginner]
+- [Raft Website][raft_website]
+- [A Hitchhiker's guide to consensus protocols][hackernoon_consensus]
+
+[raft_beginner]: http://thesecretlivesofdata.com/raft/
+[raft_website]: https://raft.github.io
+[hackernoon_consensus]: https://hackernoon.com/a-hitchhikers-guide-to-consensus-algorithms-d81aae3eb0e3
