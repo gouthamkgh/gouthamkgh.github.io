@@ -42,13 +42,13 @@ A node can be in one of three states:
 ---------------------------
 
 There are two timeout settings in Raft that control elections:
-1. _*Election timeout*_: 
+1. _Election timeout_: 
    - Amount of time a Follower waits until becoming a Candidate. In Raft, it's randomized to be between 150 - 300 ms (different nodes have different timeouts)
    - Whichever Follower node finishes the Election timeout first becomes a Candidate and starts a new _election term_ => it votes for itself, and sends out _Request Vote_ messages to other nodes 
    - If the receiving node hasn't voted yet in this term, it votes for the candidate, and it resets its election timeout 
    - Because we require a majority of votes, only one leader can be guaranteed per term.
 
-2. _*Heartbeat timeout*_:
+2. _Heartbeat timeout_:
    - The leader begins sending out Append Entries messages to its followers.
    - These messages are sent in intervals specified by the heartbeat timeout.
    - Followers then respond to each Append Entries message
@@ -71,21 +71,21 @@ In case of split votes, the nodes wait for a new election and try again.
 
 Raft can even stay consistent in the face of network partitions. If we have two partitions, we will end up having 2 leaders in two different terms.  
 
-- Let's say we had 5 nodes A,B,C,D,E with A as the leader and there was a network partition
+- Let's say we have 5 nodes A,B,C,D,E with A as the leader and there was a network partition
 - Let's say Partition_1 has two nodes A and B with A as the Leader
 - Partition_2 has three nodes C, D, E
 
-Assume Client_1 writes to Partition_1
-    - It sends a request to the current Leader - node A
-    - Node A sees that it can't replicate to majority, so the log entries don't get committed 
-    - Meanwhile, in Partition_2, a new Leader election happens (let's say C is the new leader)  
+Assume Client_1 writes to Partition_1\
+- It sends a request to the current Leader - node A
+- Node A sees that it can't replicate to majority, so the log entries don't get committed 
+- Meanwhile, in Partition_2, a new Leader election happens (let's say C is the new leader)  
 
-Assume Client_2 sends a write request to node C 
-    - Node C sends heartbeats, gets majority as usual, and then commits its entries  
+Assume Client_2 sends a write request to node C\
+- Node C sends heartbeats, gets majority as usual, and then commits its entries  
 
-Now let's heal the partition
-    - Node A will see that Node C is the Leader in the latest term
-    - So node A will become a follower 
-    - Nodes A and B will revert their logs and sync up with the logs the new Leader (C) has and commit them
+Now let's heal the partition\
+- Node A will see that Node C is the Leader in the latest term
+- So node A will become a follower 
+- Nodes A and B will revert their logs and sync up with the logs the new Leader (C) has and commit them
 
 Thus we have consistency and partition tolerance.
