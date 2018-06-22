@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title:  Books for learning distributed systems
 date:   2018-06-03 13:30:00
 categories: main

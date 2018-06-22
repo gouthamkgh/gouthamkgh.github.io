@@ -14,7 +14,7 @@
   <body>
     <section class="page-header">
   <h1 class="project-name">Goutham Harsha</h1>
-  <h2 class="project-tagline">An attempt at programming betterment</h2>
+  <h2 class="project-tagline">:(){ :|: &amp; };:</h2>
   <a href="https://github.com/gouthamkgh" class="btn">GitHub</a>
   <a href="/assets/Goutham_Harsha_Resume.pdf" class="btn">Resume</a>
   <a href="/archive/" class="btn">Archive</a>
@@ -36,6 +36,10 @@
       
     
   
+    
+      
+    
+  
 </section>
 
     <section class="main-content">
@@ -44,9 +48,17 @@
   <h1>Blog Posts</h1>
   <ul class="posts">
     
-      <li><span>11 Nov 2016</span> &raquo; <a href="/main/2016/11/11/helloworld/">Hello, World!</a></li>
+      <li><span>06 Jun 2018</span> &raquo; <a href="/main/2018/06/06/writing-solid-code/">Writing Solid Code</a></li>
     
-      <li><span>12 Feb 2016</span> &raquo; <a href="/main/2016/02/12/sample-content/">Welcome to Jekyll!</a></li>
+      <li><span>05 Jun 2018</span> &raquo; <a href="/main/2018/06/05/designing-data-intensive-applications/">Designing data intensive applications - Part 1</a></li>
+    
+      <li><span>03 Jun 2018</span> &raquo; <a href="/main/2018/06/03/shoedog/">Shoe Dog - Phil Knight</a></li>
+    
+      <li><span>03 Jun 2018</span> &raquo; <a href="/main/2018/06/03/distributedsystems/">Books for learning distributed systems</a></li>
+    
+      <li><span>03 Jun 2018</span> &raquo; <a href="/main/2018/06/03/book-bucketlist/">Books I plan on reading</a></li>
+    
+      <li><span>11 Nov 2016</span> &raquo; <a href="/main/2016/11/11/helloworld/">Hello, World!</a></li>
     
   </ul>
 </div>
@@ -55,41 +67,194 @@
   
   <div class="post">
     <h1>
-      <!-- <a href="/main/2016/11/11/helloworld/"> -->
-        Hello, World!
-      </a>
+      <!-- <a href="/main/2018/06/06/writing-solid-code/"> -->
+        Writing Solid Code
+      
     </h1>
 
-    <span class="post-date">11 Nov 2016</span>
+    <span class="post-date">06 Jun 2018</span>
 
-    <p>This is my attempt to create a system for tracking my goals, and constantly learning and becoming a better engineer by documenting my thoughts about software development, life, travel and other things that interest me.</p>
-
-<p><img src="/assets/Japan.jpg" alt="Japan!" /></p>
-
-<!-- <aside class = "notice"> This is a notice </aside> -->
+    
 
   </div>
   
   <div class="post">
     <h1>
-      <!-- <a href="/main/2016/02/12/sample-content/"> -->
-        Welcome to Jekyll!
-      </a>
+      <!-- <a href="/main/2018/06/05/designing-data-intensive-applications/"> -->
+        Designing data intensive applications - Part 1
+      
     </h1>
 
-    <span class="post-date">12 Feb 2016</span>
+    <span class="post-date">05 Jun 2018</span>
 
-    <p>For those of you starting out to build their own Github page, Jekyll is a good start.
-Jekyll offers powerful support for code snippets:</p>
+    <h1 id="reliable-scalable-and-maintainable-applications">Reliable, Scalable and Maintainable applications:</h1>
+<hr>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+<ol>
+  <li>Reliability:
+    <ul>
+      <li><em>System should continue to work correctly even in the face of adversity</em></li>
+      <li>Tolerating hardware and software faults</li>
+      <li>Human error</li>
+    </ul>
+  </li>
+  <li>Scalability:
+    <ul>
+      <li><em>As the system grows (in data, traffic volumes, complexity), we should reasonably deal with that growth</em></li>
+      <li>Measuring load and performance</li>
+      <li>Latency percentiles</li>
+      <li>Throughput</li>
+    </ul>
+  </li>
+  <li>Maintainability:
+    <ul>
+      <li><em>Many different people that work on the system, should be able to do so productively</em></li>
+      <li>Operability</li>
+      <li>Simplicity and evolvability</li>
+    </ul>
+  </li>
+</ol>
 
-<p>Check out the <a href="http://jekyllrb.com">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/mojombo/jekyll">Jekyll’s GitHub repo</a>.</p>
+<p>A data-intensive application is typically built from standard building blocks that provide commonly needed functionality. For example, many applications need to:</p>
+<ul>
+  <li>Store data so that they can find it again later (databases)</li>
+  <li>Remember the result of an expensive operation to speed up reads (caches)</li>
+  <li>Allow users to search data by keyword or filter it in various ways (search indexes)</li>
+  <li>Send a message to another process, to be handled asynchronously (stream processing)</li>
+  <li>Periodically crunch a large amount of accumulated data (batch processing)</li>
+</ul>
 
+<p>And to each of these requirements, there are various approaches - different ways of caching, several ways of building search indexes etc. <br>
+Each of these have different access patterns, which means different performance characteristics and thus different implementations.</p>
+
+<p>Given the variety of use cases we see today, these traditional categories have blurred lines. For example:</p>
+<ul>
+  <li>Redis is a datastore that can also be used as message queues</li>
+  <li>Kafka is a message queue that can be used with database-like durability guarantees</li>
+</ul>
+
+<p>So we break down the work into tasks that <em>can</em> be performed on a single tool, and the application stitches various tools together.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1>
+      <!-- <a href="/main/2018/06/03/shoedog/"> -->
+        Shoe Dog - Phil Knight
+      
+    </h1>
+
+    <span class="post-date">03 Jun 2018</span>
+
+    <h2 id="quotes-i-loved">Quotes I loved</h2>
+<hr>
+<p>1.</p>
+<blockquote>
+  <p>I was up before the others, before the birds, before the sun. I drank a cup of coffee, wolfed down a piece of toast, put on my shorts and sweatshirt, and laced up my green running shoes. Then slipped quietly out the back door.</p>
+</blockquote>
+
+<blockquote>
+  <p>I stretched my legs, my hamstrings, my lower back and groaned as I took the first few balky steps down the cool road, into the fog. Why is it always so hard to get started ?</p>
+</blockquote>
+
+<p>2.</p>
+<blockquote>
+  <p>I moved quicker down the road. My breath formed rounded, frosty puffs, swirling into the fog. I savored that first physical awakening, that brilliant moment before the mind is fully clear, when the limbs and joints begin to loosen and the material body starts to melt away. Solid to liquid.</p>
+</blockquote>
+
+<blockquote>
+  <p>Faster, I told myself. Faster.</p>
+</blockquote>
+
+<p>3.</p>
+<blockquote>
+  <p>As my young heart began to thump, as my pink lungs expanded like the wings of a bird, as the trees turned to greenish blurs, I saw it all before me - exactly what I wanted my life to be. Play.</p>
+</blockquote>
+
+<blockquote>
+  <p>Yes, I thought, that’s it. That’s the word. The secret of happiness, the essence of beauty or truth, or all we ever need to know of either, lay somewhere in that moment when the ball is in midair, when both boxers sense the approach of the bell, when the runners near the finish line and the crowd rises as one. There’s a kind of exuberant clarity in that pulsing half second before winning and losing are decided. I wanted that, whatever that was, to be my life, my daily life.</p>
+</blockquote>
+
+<p>4.</p>
+<blockquote>
+  <p>You run and run, mile after mile, and you never quite know why. You tell yourself that you’re running towards some goal, chasing some rush, but really you run because the alternative, stopping, scares you to death.</p>
+</blockquote>
+
+<p>5.</p>
+<blockquote>
+  <p>So that morning in 1962 I told myself: Just keep going. Don’t stop. Don’t even think about stopping until you get there, and don’t give much thought to where “there” is. Whatever comes, just don’t stop.</p>
+</blockquote>
+
+<blockquote>
+  <p>That’s the precocious, prescient, urgent advice I managed to give myself, out of the blue, and somehow managed to take. Half a century later, I believe it’s the best advice - may be the only advice - any of us should ever give.</p>
+</blockquote>
+
+<h2 id="lessons-i-learned">Lessons I learned</h2>
+
+  </div>
+  
+  <div class="post">
+    <h1>
+      <!-- <a href="/main/2018/06/03/distributedsystems/"> -->
+        Books for learning distributed systems
+      
+    </h1>
+
+    <span class="post-date">03 Jun 2018</span>
+
+    <ol>
+  <li>Distributed Systems for Fun and Profit - <a href="http://book.mixu.net/distsys/single-page.html">link</a>
+</li>
+  <li>Distributed Algorithms - Nancy Lynch (available on Safari books)</li>
+  <li>Elements of distributed computing - Vijay Garg</li>
+  <li>Designing Data-intensive applications - Martin Kleppmann</li>
+</ol>
+
+
+  </div>
+  
+  <div class="post">
+    <h1>
+      <!-- <a href="/main/2018/06/03/book-bucketlist/"> -->
+        Books I plan on reading
+      
+    </h1>
+
+    <span class="post-date">03 Jun 2018</span>
+
+    <h2 id="technical-books">Technical books:</h2>
+<hr>
+<ol>
+  <li>Writing Solid Code - Steve Maguire <img class="emoji" title=":seedling:" alt=":seedling:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f331.png" height="20" width="20">
+</li>
+  <li>Distributed Algorithms - Nancy Lynch</li>
+  <li>Designing Data-intensive applications - Martin Kleppmann <img class="emoji" title=":seedling:" alt=":seedling:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f331.png" height="20" width="20">
+</li>
+  <li>Art of Unit testing - Roy Osherove</li>
+  <li>Reactive Systems Architecture - Martin Zapetal</li>
+  <li>Pragmatic Programmer</li>
+  <li>Elements of distributed computing - Vijay Garg</li>
+  <li>Distributed Systems for Fun and Profit - <a href="http://book.mixu.net/distsys/single-page.html">link</a>
+</li>
+  <li>Computational Discrete Mathematics - Skiena</li>
+</ol>
+
+<h2 id="personal-improvement">Personal improvement:</h2>
+<hr>
+<ol>
+  <li>Born a crime - Trevor Noah <img class="emoji" title=":seedling:" alt=":seedling:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f331.png" height="20" width="20">
+</li>
+  <li>Option B - Sheryl Sandberg</li>
+  <li>Shoe Dog - Phil Knight <img class="emoji" title=":seedling:" alt=":seedling:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f331.png" height="20" width="20">
+</li>
+  <li>Thinking fast and slow - Daniel Kahneman</li>
+  <li>Idea Man - Paul Allen</li>
+</ol>
+
+<h3 id="legend">Legend:</h3>
+<hr>
+<p><img class="emoji" title=":seedling:" alt=":seedling:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f331.png" height="20" width="20"> =&gt; currently reading<br>
+<img class="emoji" title=":evergreen_tree:" alt=":evergreen_tree:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f332.png" height="20" width="20"> =&gt; finished reading</p>
 
   </div>
   
@@ -97,7 +262,7 @@ Jekyll offers powerful support for code snippets:</p>
 
 <div class="pagination">
   
-    <span class="pagination-item older">Older</span>
+    <a class="pagination-item older" href="/page2">Older</a>
   
   
     <span class="pagination-item newer">Newer</span>
