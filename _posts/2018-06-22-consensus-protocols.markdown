@@ -75,15 +75,15 @@ Raft can even stay consistent in the face of network partitions. If we have two 
 - Let's say Partition_1 has two nodes A and B with A as the Leader
 - Partition_2 has three nodes C, D, E
 
-Assume Client_1 writes to Partition_1\
+Assume Client_1 writes to Partition_1  
 - It sends a request to the current Leader - node A
 - Node A sees that it can't replicate to majority, so the log entries don't get committed 
 - Meanwhile, in Partition_2, a new Leader election happens (let's say C is the new leader)  
 
-Assume Client_2 sends a write request to node C\
+Assume Client_2 sends a write request to node C  
 - Node C sends heartbeats, gets majority as usual, and then commits its entries  
 
-Now let's heal the partition\
+Now let's heal the partition  
 - Node A will see that Node C is the Leader in the latest term
 - So node A will become a follower 
 - Nodes A and B will revert their logs and sync up with the logs the new Leader (C) has and commit them
